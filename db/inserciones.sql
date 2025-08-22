@@ -55,7 +55,7 @@ INSERT INTO producto (id_categoria, id_proveedor, nombre, codigo_barras, precio_
 (8, 8, 'Cámara Canon EOS R50', '7707777888999', 2800000, 18, 1),
 (9, 3, 'Impresora HP LaserJet Pro', '7708888999000', 1200000, 22, 1);
 
--- 5. Ventas
+
 INSERT INTO venta (id_cliente, fecha, medio_pago, comentario, estado) VALUES
 ('CC1001', '2025-01-15', 'E', 'Compra en efectivo', 'A'),
 ('CC1002', '2025-01-16', 'T', 'Compra con tarjeta', 'A'),

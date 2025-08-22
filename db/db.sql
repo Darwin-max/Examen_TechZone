@@ -47,7 +47,7 @@ CREATE TABLE producto(
     FOREIGN KEY (id_proveedor) REFERENCES proveedor(id_proveedor) ON DELETE CASCADE
 );
 
--- 5. Ventas
+
 CREATE TABLE venta(
     id_venta SERIAL PRIMARY KEY,
     id_cliente VARCHAR(20) NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE venta(
     FOREIGN KEY (id_cliente) REFERENCES cliente(id) ON DELETE CASCADE
 );
 
--- 6. Venta Productos (tabla de relación muchos a muchos)
+
 CREATE TABLE venta_producto(
     id_venta INT NOT NULL,
     id_producto INT NOT NULL,
