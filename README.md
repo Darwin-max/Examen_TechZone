@@ -60,20 +60,3 @@ Aqui encontraras dichos archivos
 
 - 📌 procedure.sql → Procedimiento almacenado para gestionar ventas con transacciones.
 
-
-PostgreSQL con Docker
-Creación del Contenedor 🙏🏻
-docker run -d --name postgres_container -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=campus -p 5433:5432 -v pgdata:/var/lib/postgresql/data --restart=unless-stopped postgres:15
-Conectar al Contenedor de Docker
-docker exec -it postgres_container bash
-Conectar con PostgreSQL bajo Consola
-psql --host=localhost --username=admin -d campus --password
-
-
-psql -h localhost -U admin -d campus -W
-
-
-Comandos PSQL
-\l : Lista las bases de datos
-\c {db_name}: Cambiar a una base de datos existente
-
