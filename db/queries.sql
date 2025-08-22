@@ -19,6 +19,18 @@ GROUP BY DATE_TRUNC('month', fecha)
 ORDER BY mes;
 
 -- 3 la mente no me dio para tanto
+-- 3️ Obtener el cliente con más ventas realizadas.
+
+SELECT 
+    cliente.id,
+    cliente.nombre || ' ' || cliente.apellidos AS cliente,
+    SUM(venta_producto.total) AS gasto_total,
+    COUNT(DISTINCT venta.id_venta) AS numero_venta,
+    RANK() OVER (ORDER BY SUM(venta_producto.total) DESC) AS ranking_gasto
+FROM venta
+JOIN cliente USING (id_cliente)
+JOIN venta_producto USING (id_venta)
+GROUP BY cliente.id, cliente.nombre, cliente.apellidos;
 
 -- 4️ Listar los productos más vendidos.
 SELECT 
